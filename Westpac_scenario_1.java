@@ -4,9 +4,6 @@ package Demo_pkg;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +22,6 @@ public class Westpac_scenario_1 {
 
 	WebDriver driver = null;
 
-	@BeforeMethod
 	@BeforeClass
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "C:\\chrome_driver\\chromedriver.exe");
