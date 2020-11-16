@@ -146,7 +146,7 @@ public class Westpac_scenario_4 {
 	
 	@AfterClass
 	public void teardown() throws Exception {
-		System.out.println("Closing the Driver");
+		System.out.println("Closing the Driver in User story 2 -- 3rd scenario-");
 		driver.quit();
 	}
 

@@ -4,6 +4,9 @@ package Demo_pkg;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -22,13 +25,14 @@ public class Westpac_scenario_1 {
 
 	WebDriver driver = null;
 
+	@BeforeMethod
 	@BeforeClass
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "C:\\chrome_driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		System.out.println("USER STORY 1");
 		System.out.println(
-				"Running 1st scenario--- Clicking on information icon next to Current Age and verifying the message displayed");
+				"Running User Story 1---1st scenario--- Clicking on information icon next to Current Age and verifying the message displayed");
 		System.out.println("Opening WestPac homepage");
 		driver.get("https://www.westpac.co.nz/");
 
@@ -107,7 +111,7 @@ public class Westpac_scenario_1 {
 
 	@AfterClass
 	public void teardown() throws Exception {
-		System.out.println("Closing the Driver");
+		System.out.println("Closing the Driver in User Story 1---1st scenario");
 		driver.quit();
 	}
 }
